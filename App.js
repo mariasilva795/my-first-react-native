@@ -33,8 +33,8 @@ export default function App() {
   return (
     <View style={styles.appContainer}>
       <Button
-        title="Add new goal"
-        color="#237586"
+        title="ADD YOUR GOAL"
+        color="white"
         onPress={startAddGoalHandle}
       />
       <GoalImput
@@ -70,8 +70,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 50,
     paddingHorizontal: 16,
+    backgroundColor: "#385c63",
   },
   goalContent: {
     flex: 5,
+  },
+  buttonAddGoal: {
+    backgroundColor: "red",
   },
 });

@@ -30,7 +30,7 @@ function GoalImput(props) {
         </View>
 
         <TextInput
-          placeholder="Add your goald"
+          placeholder="ADD YOUR GOAL"
           onChangeText={goalInputHandle}
           style={styles.textInput}
           value={enteredGoalText}
