@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { View, TextInput, Button, StyleSheet, Modal } from "react-native";
+import {
+  Image,
+  View,
+  TextInput,
+  Button,
+  StyleSheet,
+  Modal,
+} from "react-native";
 
 function GoalImput(props) {
   const [enteredGoalText, setEnteredGoalText] = useState("");
@@ -14,6 +21,14 @@ function GoalImput(props) {
   return (
     <Modal visible={props.isVisible} animationType="slide">
       <View style={styles.inputContainer}>
+        <View style={styles.imgContainer}>
+          <Image
+            style={styles.img}
+            source={require("../assets/images/goal.png")}
+            resizeMode="contain"
+          ></Image>
+        </View>
+
         <TextInput
           placeholder="Add your goald"
           onChangeText={goalInputHandle}
@@ -42,9 +57,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alingItem: "center",
-    marginTop: 24,
-    borderBottomColor: "#cccccc",
-    borderBottomWidth: 1,
+    backgroundColor: "#385c63",
   },
   textInput: {
     height: 50,
@@ -52,6 +65,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "black",
     padding: 5,
+    color: "white",
   },
   buttonsContainer: {
     flexDirection: "row",
@@ -63,6 +77,14 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     width: 160,
     marginHorizontal: 8,
+  },
+  imgContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  img: {
+    width: 100,
+    height: 100,
   },
 });
 
